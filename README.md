@@ -1,9 +1,11 @@
+# Transfer YouTube subscriptions
+
 ## Overview
 This tool allows transferring YouTube subscriptions from one account to another by automating browser with [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/).
 
 The idea is to start Chrome in debugging mode with `--remote-debugging-port` command. Thanks to that, Selenium will be able to connect directly to the given port and to use a Chrome instance, where the user is logged in to the YouTube account.
 
-It was inspired by a tutorial from [CosmoCode - How to connect Selenium to an existing browser that was opened manually?](https://cosmocode.io/how-to-connect-selenium-to-an-existing-browser-that-was-opened-manually/)
+It was inspired by a tutorial by [CosmoCode - How to connect Selenium to an existing browser that was opened manually?](https://cosmocode.io/how-to-connect-selenium-to-an-existing-browser-that-was-opened-manually/)
 
 ## How to use it?
 
@@ -27,9 +29,9 @@ It was inspired by a tutorial from [CosmoCode - How to connect Selenium to an ex
 5. Run `python script.py`
 
 #### Check results
-The script checks if the channel is subscribed and clicks 'Subscribe' button if not. 
+The script checks if the channel is subscribed and clicks 'Subscribe' button if not. In case anything goes wrong (e.g. channel is banned and no longer available), the link is skipped.
+
 Results are being printed to the console and to `import.log` file. 
-In case anything goes wrong (e.g. channel is banned and no longer available), the link is skipped.
 
 ![console.png](https://github.com/michalmirowski/selenium-yt-subs-transfer/blob/master/screenshots/console.png)
 
