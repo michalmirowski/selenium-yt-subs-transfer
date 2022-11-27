@@ -5,26 +5,32 @@ The idea is to start Chrome in debugging mode with `--remote-debugging-port` com
 
 It was inspired by a tutorial from [CosmoCode - How to connect Selenium to an existing browser that was opened manually?](https://cosmocode.io/how-to-connect-selenium-to-an-existing-browser-that-was-opened-manually/)
 
+## Requirements
+* Python 3.10 or higher
+* Git
+* Terminal (can be Windows cmd)
+* Google Chrome
+
 ## How to use it?
 
 ### Export subscriptions
 1. The easiest way is to use the official tool [Google Takeout](https://takeout.google.com/takeout/custom/youtube) – detailed instruction [here](https://kb.adamsdesk.com/application/youtube-export-subscriptions/#instructions).
-2. Unzip and paste `subscriptions.csv` to the script directory.
+2. Unzip `subscriptions.csv`.
 
 ### Import subscriptions
 #### Setup browser
 1. Add chrome to PATH – detailed instruction [here](https://superuser.com/questions/1587920/how-do-i-add-environment-variables-of-chrome-in-windows-10).
 2. Close all opened chrome instances.
-3. Run the command `chrome.exe --remote-debugging-port=9222`
+3. Run `chrome.exe --remote-debugging-port=9222`.
 4. Log in to YT to the target account.
 5. Make sure English is selected in profile settings.<br>![language.png](https://github.com/michalmirowski/selenium-yt-subs-transfer/blob/master/screenshots/language.png)
 
 #### Run script
-1. Clone repository: `git clone <repo-url>`
-2. Go to `cd selenium-yt-subs-transfer` 
-3. Activate virtual environment: `python -m venv venv` and `venv\Scripts\activate.bat`
-4. Install dependencies: `pip install -r requirements.txt`
-5. Run `python script.py`
+1. Clone/download this repository.
+2. Paste `subscriptions.csv` into your `selenium-yt-subs-transfer` folder.
+3. Activate virtual environment: `python -m venv venv` and `venv\Scripts\activate.bat`.
+4. Install dependencies: `pip install -r requirements.txt`.
+5. Run `python script.py`.
 
 #### Check results
 The script checks if the channel is subscribed and clicks 'Subscribe' button if not. 
