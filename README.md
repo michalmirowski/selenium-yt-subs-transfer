@@ -9,8 +9,6 @@ It was inspired by a tutorial by [CosmoCode - How to connect Selenium to an exis
 
 ## Requirements
 * Python 3.10 or higher
-* Git
-* Terminal (can be Windows cmd)
 * Google Chrome
 
 ## How to use it?
@@ -23,7 +21,7 @@ It was inspired by a tutorial by [CosmoCode - How to connect Selenium to an exis
 #### Setup browser
 1. Add chrome to PATH – detailed instruction [here](https://superuser.com/questions/1587920/how-do-i-add-environment-variables-of-chrome-in-windows-10).
 2. Close all opened chrome instances.
-3. Run `chrome.exe --remote-debugging-port=9222`.
+3. Open `cmd` and run `chrome.exe --remote-debugging-port=9222`.
 4. Log in to YT to the target account.
 5. Make sure English is selected in profile settings.<br>![language.png](https://github.com/michalmirowski/selenium-yt-subs-transfer/blob/master/screenshots/language.png)
 
